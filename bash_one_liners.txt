@@ -1,0 +1,15 @@
+These are a few one liners for the Bash command line to verify the results of the BST and hash set analysis. 
+Please note that these commands are not at all efficient. They were not written with efficiency in mind, but just
+to verify the results of the BST and hash set.
+
+Counting unique words:
+- sort < holy_grail_words.lst | uniq | wc -l 
+
+Counting word lenghts:
+- for word in $(cat holy_grail_words.lst); do echo $(echo -n $word | wc -c); done | sort -n | uniq -c
+
+Printing the ten most frequently used words with a length larger than 4. 
+- awk 'length($0) > 4' < holy_grail_words.lst | sort | uniq -c | sort -n | tail -n 10
+
+(To verify the results for eng_news instead, change every instance of 'holy_grail_words.lst' to 'eng_news_100K-sentences_words.lst'.
+Please be aware that running these commands on this file might take a while to complete due to the inefficiency of these commands.)
