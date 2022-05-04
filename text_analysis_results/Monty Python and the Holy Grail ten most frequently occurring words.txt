@@ -1,0 +1,10 @@
+arthur : 261
+launcelot : 102
+knight : 84
+galahad : 81
+father : 76
+knights : 69
+bedevere : 68
+guard : 58
+robin : 58
+right : 57
